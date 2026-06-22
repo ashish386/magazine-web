@@ -1,0 +1,486 @@
+  <?php include('header.php');?>
+        <section class="breadcrumb-section">
+            <h2 class="sr-only">Site Breadcrumb</h2>
+            <div class="container">
+                <div class="breadcrumb-contents">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Product Details</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <main class="inner-page-sec-padding-bottom">
+            <div class="container">
+                <div class="row  mb--60">
+                    <div class="col-lg-5 mb--30">
+                        <!-- Product Details Slider Big Image-->
+                        <div class="product-details-slider sb-slick-slider arrow-type-two" data-slick-setting='{
+              "slidesToShow": 1,
+              "arrows": false,
+              "fade": true,
+              "draggable": false,
+              "swipe": false,
+              "asNavFor": ".product-slider-nav"
+              }'>
+                            <div class="single-slide">
+                                <img src="image/1.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/2.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/3.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/4.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/5.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- Product Details Slider Nav -->
+                        <div class="mt--30 product-slider-nav sb-slick-slider arrow-type-two" data-slick-setting='{
+            "infinite":true,
+              "autoplay": true,
+              "autoplaySpeed": 8000,
+              "slidesToShow": 4,
+              "arrows": true,
+              "prevArrow":{"buttonClass": "slick-prev","iconClass":"fa fa-chevron-left"},
+              "nextArrow":{"buttonClass": "slick-next","iconClass":"fa fa-chevron-right"},
+              "asNavFor": ".product-details-slider",
+              "focusOnSelect": true
+              }'>
+                            <div class="single-slide">
+                                <img src="image/1.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/2.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/3.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/4.jpg" alt="">
+                            </div>
+                            <div class="single-slide">
+                                <img src="image/5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="product-details-info pl-lg--30 ">
+                            <p class="tag-block">Tags: <a href="#">eMaazine</a>, <a href="#">Books</a></p>
+                            <h3 class="product-title">Lucknow Focus India Magazine - November - December 2025</h3>
+                              <p>The Nov–Dec issue celebrates South Asia & cinema, exploring the region’s fashion, film, and craftsmanship. 
+							  Highlights include a Bhutan shoot capturing the season’s key trends, essays on jewellery’s emotional power in Indian 
+							  cinema, the Nepali diaspora, and hijab-led method dressing. Features spotlight Swati & Sunaina’s woven couture, Rajesh 
+							  Pratap Singh, and India’s iconic costume designers. Conversations with Mira Nair, Asha Parekh, and Hemant Chaturvedi trace
+							  the film's legacy, while essays revisit Bombay’s lost allure, South Asia’s creative directors, and India’s short film 
+							  renaissance. Plus, cinematic beauty, wellness, and love stories reimagined in style.</p>
+                            <div class="price-block">
+                                <span class="price-new">Rs10/-</span>
+                                <del class="price-old">Rs10/-</del>
+                            </div>
+                            <div class="rating-widget">
+                                <div class="rating-block">
+                                    <span class="fas fa-star star_on"></span>
+                                    <span class="fas fa-star star_on"></span>
+                                    <span class="fas fa-star star_on"></span>
+                                    <span class="fas fa-star star_on"></span>
+                                    <span class="fas fa-star "></span>
+                                </div>
+                                <div class="review-widget">
+                                    <a href="#">(10 Reviews)</a> <span>|</span>
+                                    <a href="#">Write a review</a>
+                                </div>
+                            </div>
+                            <article class="product-details-article">
+                                <h4 class="sr-only">Product Summery</h4>
+                                <p>Read Lucknow Focus India along with 10,000+ other magazines & newspapers with just one subscription </p>
+                            </article>
+                            <div class="add-to-cart-row">
+                                <div class="count-input-block">
+                                    <span class="widget-label">Qty</span>
+                                    <input type="number" class="form-control text-center" value="1">
+                                </div>
+                                <div class="add-cart-btn">
+                                    <a href="#" class="btn btn-outlined--primary"><span class="plus-icon">+</span>Buy Now</a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-custom-tab review-tab section-padding">
+                    <ul class="nav nav-tabs nav-style-2" id="myTab2" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="tab1" data-bs-toggle="tab" href="#tab-1" role="tab"
+                                aria-controls="tab-1" aria-selected="true">
+                                DESCRIPTION
+                            </a>
+                        </li>
+ 
+                    </ul>
+                    <div class="tab-content space-db--20" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab1">
+                            <article class="review-article">
+                                <h1 class="sr-only">Tab Article</h1>
+                                <p>Fashion has been creating well-designed collections since 2010. The brand offers
+                                    feminine designs delivering
+                                    stylish
+                                    separates and statement dresses which have since evolved into a full ready-to-wear
+                                    collection in which every
+                                    item is
+                                    a
+                                    vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful
+                                    elegance and unmistakable
+                                    signature
+                                    style. All the beautiful pieces are made in Italy and manufactured with the greatest
+                                    attention. Now Fashion
+                                    extends
+                                    to
+                                    a range of accessories including shoes, hats, belts and more!</p>
+                            </article>
+                        </div>
+                   </div>
+                </div>
+                <!-- <div class="tab-product-details">
+  <div class="brand">
+    <img src="image/others/review-tab-product-details.jpg" alt="">
+  </div>
+  <h5 class="meta">Reference <span class="small-text">demo_5</span></h5>
+  <h5 class="meta">In stock <span class="small-text">297 Items</span></h5>
+  <section class="product-features">
+    <h3 class="title">Data sheet</h3>
+    <dl class="data-sheet">
+      <dt class="name">Compositions</dt>
+      <dd class="value">Viscose</dd>
+      <dt class="name">Styles</dt>
+      <dd class="value">Casual</dd>
+      <dt class="name">Properties</dt>
+      <dd class="value">Maxi Dress</dd>
+    </dl>
+  </section>
+</div> -->
+            </div>
+            <!--=================================
+    RELATED PRODUCTS BOOKS
+===================================== -->
+            <section class="">
+                <div class="container">
+                    <div class="section-title section-title--bordered">
+                        <h2>RELATED PRODUCTS</h2>
+                    </div>
+                    <div class="product-slider sb-slick-slider slider-border-single-row" data-slick-setting='{
+                "autoplay": true,
+                "autoplaySpeed": 8000,
+                "slidesToShow": 4,
+                "dots":true
+            }' data-slick-responsive='[
+                {"breakpoint":1200, "settings": {"slidesToShow": 4} },
+                {"breakpoint":992, "settings": {"slidesToShow": 3} },
+                {"breakpoint":768, "settings": {"slidesToShow": 2} },
+                {"breakpoint":480, "settings": {"slidesToShow": 1} }
+            ]'>
+                       <div class="single-slide">
+                        <div class="product-card">
+                         
+                            <div class="product-card--body">
+                                <div class="card-image">
+                                    <img src="image/1.jpg" alt="">
+                                    <div class="hover-contents">
+                                        <a href="detail.php" class="hover-image">
+                                            <img src="image/2.jpg" alt="">
+                                        </a>
+                                   <div class="hover-btns">
+										
+													<a href="detail.php" class="single-btn">Buy Now
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+											
+											</div>
+                                    </div>
+                                </div>
+							 <div class="product-header">
+                                <h3><a href="product-details.html">Magazine 2025 December
+                                 </a></h3>
+                            </div>
+                              <div class="price-block">
+										<span class="price">Rs 10</span>
+										<del class="price-old">Rs 10</del>
+										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="single-slide">
+                        <div class="product-card">
+                         
+                            <div class="product-card--body">
+                                <div class="card-image">
+                                    <img src="image/1.jpg" alt="">
+                                    <div class="hover-contents">
+                                        <a href="detail.php" class="hover-image">
+                                            <img src="image/2.jpg" alt="">
+                                        </a>
+                                   <div class="hover-btns">
+										
+													<a href="detail.php" class="single-btn">Buy Now
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+											
+											</div>
+                                    </div>
+                                </div>
+							 <div class="product-header">
+                                <h3><a href="product-details.html">Magazine 2025 December
+                                 </a></h3>
+                            </div>
+                              <div class="price-block">
+										<span class="price">Rs 10</span>
+										<del class="price-old">Rs 10</del>
+										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="single-slide">
+                        <div class="product-card">
+                         
+                            <div class="product-card--body">
+                                <div class="card-image">
+                                    <img src="image/1.jpg" alt="">
+                                    <div class="hover-contents">
+                                        <a href="detail.php" class="hover-image">
+                                            <img src="image/2.jpg" alt="">
+                                        </a>
+                                   <div class="hover-btns">
+										
+													<a href="detail.php" class="single-btn">Buy Now
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+											
+											</div>
+                                    </div>
+                                </div>
+							 <div class="product-header">
+                                <h3><a href="product-details.html">Magazine 2025 December
+                                 </a></h3>
+                            </div>
+                              <div class="price-block">
+										<span class="price">Rs 10</span>
+										<del class="price-old">Rs 10</del>
+										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="single-slide">
+                        <div class="product-card">
+                         
+                            <div class="product-card--body">
+                                <div class="card-image">
+                                    <img src="image/1.jpg" alt="">
+                                    <div class="hover-contents">
+                                        <a href="detail.php" class="hover-image">
+                                            <img src="image/2.jpg" alt="">
+                                        </a>
+                                   <div class="hover-btns">
+										
+													<a href="detail.php" class="single-btn">Buy Now
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+											
+											</div>
+                                    </div>
+                                </div>
+							 <div class="product-header">
+                                <h3><a href="product-details.html">Magazine 2025 December
+                                 </a></h3>
+                            </div>
+                              <div class="price-block">
+										<span class="price">Rs 10</span>
+										<del class="price-old">Rs 10</del>
+										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="single-slide">
+                        <div class="product-card">
+                         
+                            <div class="product-card--body">
+                                <div class="card-image">
+                                    <img src="image/1.jpg" alt="">
+                                    <div class="hover-contents">
+                                        <a href="detail.php" class="hover-image">
+                                            <img src="image/2.jpg" alt="">
+                                        </a>
+                                   <div class="hover-btns">
+										
+													<a href="detail.php" class="single-btn">Buy Now
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+											
+											</div>
+                                    </div>
+                                </div>
+							 <div class="product-header">
+                                <h3><a href="product-details.html">Magazine 2025 December
+                                 </a></h3>
+                            </div>
+                              <div class="price-block">
+										<span class="price">Rs 10</span>
+										<del class="price-old">Rs 10</del>
+										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+									</div>
+                            </div>
+                        </div>
+                    </div>
+				
+
+				</div>
+                </div>
+            </section>
+            <!-- Modal -->
+        <div class="modal fade modal-quick-view" id="quickModal" tabindex="-1" role="dialog"
+        aria-labelledby="quickModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="product-details-modal">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <!-- Product Details Slider Big Image-->
+                            <div class="product-details-slider sb-slick-slider arrow-type-two" data-slick-setting='{
+                                "slidesToShow": 1,
+                                "arrows": false,
+                                "fade": true,
+                                "draggable": false,
+                                "swipe": false,
+                                "asNavFor": ".product-slider-nav"
+                                }'>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-1.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-2.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-3.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-4.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-5.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- Product Details Slider Nav -->
+                            <div class="mt--30 product-slider-nav sb-slick-slider arrow-type-two"
+                                data-slick-setting='{
+        "infinite":true,
+          "autoplay": true,
+          "autoplaySpeed": 8000,
+          "slidesToShow": 4,
+          "arrows": true,
+          "prevArrow":{"buttonClass": "slick-prev","iconClass":"fa fa-chevron-left"},
+          "nextArrow":{"buttonClass": "slick-next","iconClass":"fa fa-chevron-right"},
+          "asNavFor": ".product-details-slider",
+          "focusOnSelect": true
+          }'>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-1.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-2.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-3.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-4.jpg" alt="">
+                                </div>
+                                <div class="single-slide">
+                                    <img src="image/products/product-details-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 mt--30 mt-lg--30">
+                            <div class="product-details-info pl-lg--30 ">
+                                <p class="tag-block">Tags: <a href="#">Movado</a>, <a href="#">Omega</a></p>
+                                <h3 class="product-title">Beats EP Wired On-Ear Headphone-Black</h3>
+                                <ul class="list-unstyled">
+                                    <li>Ex Tax: <span class="list-value"> £60.24</span></li>
+                                    <li>Brands: <a href="#" class="list-value font-weight-bold"> Canon</a></li>
+                                    <li>Product Code: <span class="list-value"> model1</span></li>
+                                    <li>Reward Points: <span class="list-value"> 200</span></li>
+                                    <li>Availability: <span class="list-value"> In Stock</span></li>
+                                </ul>
+                                <div class="price-block">
+                                    <span class="price-new">Rs73.79</span>
+                                    <del class="price-old">Rs91.86</del>
+                                </div>
+                                <div class="rating-widget">
+                                    <div class="rating-block">
+                                        <span class="fas fa-star star_on"></span>
+                                        <span class="fas fa-star star_on"></span>
+                                        <span class="fas fa-star star_on"></span>
+                                        <span class="fas fa-star star_on"></span>
+                                        <span class="fas fa-star "></span>
+                                    </div>
+                                    <div class="review-widget">
+                                        <a href="#">(15 Reviews)</a> <span>|</span>
+                                        <a href="#">Write a review</a>
+                                    </div>
+                                </div>
+                                <article class="product-details-article">
+                                    <h4 class="sr-only">Product Summery</h4>
+                                    <p>Long printed dress with thin adjustable straps. V-neckline and wiring under
+                                        the Dust with ruffles
+                                        at the bottom
+                                        of the
+                                        dress.</p> 
+                                </article>
+                                <div class="add-to-cart-row">
+                                    <div class="count-input-block">
+                                        <span class="widget-label">Qty</span>
+                                        <input type="number" class="form-control text-center" value="1">
+                                    </div>
+                                    <div class="add-cart-btn">
+                                        <a href="#" class="btn btn-outlined--primary"><span
+                                                class="plus-icon">+</span>Add to Cart</a>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="widget-social-share">
+                        <span class="widget-label">Share:</span>
+                        <div class="modal-social-share">
+                            <a href="#" class="single-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="single-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+       
+
+
+	   </main>
+   
+
+
+   </div>
+
+ <?php include('footer.php');?>
