@@ -1,4 +1,6 @@
-	  <section class="hero-area hero-slider-1">
+	 
+     
+     <section class="hero-area hero-slider-1">
             <div class="sb-slick-slider" data-slick-setting='{
                             "autoplay": true,
                             "fade": true,
@@ -12,7 +14,7 @@
                     <div class="container">
                         <div class="home-content text-center text-sm-left position-relative">
                             <div class="hero-partial-image image-right">
-                                <img src="<?php echo base_url('public/uploads/slider/home-slider-2-ai.png');?>" alt="">
+                                <img src="<?php echo base_url('/uploads/slider/home-slider-2-ai.png');?>" alt="">
                             </div>
                             <div class="row g-0">
                                 <div class="col-xl-6 col-md-6 col-sm-7">
@@ -34,7 +36,7 @@
                     <div class="container">
                         <div class="home-content text-center text-sm-left position-relative">
                             <div class="hero-partial-image image-left">
-                                <img src="<?php echo base_url('public/uploads/slider/home-slider-1-ai.png');?>" alt="">
+                                <img src="<?php echo base_url('/uploads/slider/home-slider-1-ai.png');?>" alt="">
                             </div>
                             <div class="row g-0">
                                 <div class="col-xl-6 col-md-6 col-sm-7">

@@ -154,6 +154,10 @@ class HomeController extends BaseController
         'date'        => date("Y-m-d"),
         'amount'      => $this->request->getPost("amount"),
         'quantity'    => $this->request->getPost("quantity"),
+        'pay_status'  =>1,
+        'pay_mode'    => "Cash on Delivery",
+        'pay_date'    => date("Y-m-d"),
+        'trans_no'    =>'TEST123'
     ];
 
     $db->table('orders')->insert($arr2);
@@ -161,10 +165,10 @@ class HomeController extends BaseController
     $orderid = $db->insertID();
 
     return redirect()->to(
-        'payOrder/' .
-        $orderid . '/' .
-        $this->request->getPost("product_id")
-    );
+        'orderSuccess');
+        // $orderid . '/' .
+        // $this->request->getPost("product_id")
+
 }
 
 
@@ -198,16 +202,36 @@ class HomeController extends BaseController
             $pro= $product->getProductById($id);
             $data['product'] = $pro->title;
             $data['amount'] = $pro->special_price;
-            $data['merchantkey']=$merchantkey = "lp1Rxd";
-            $data['payurl']="https://secure.payu.in/_payment";
-            $data['salt']= $salt = "5b16codcBM4SJ36dvqhSAquHJMJrCwr5";
+          
+            
+
+
+
             $data['txnid']=$txnid=substr(hash('sha256', mt_rand() . microtime()), 0, 20);
 
             // echo "<pre>";
             // print_r($orderData); 
             //  print_r($address);
             // die;
-            $hash_string=  $merchantkey.'|'.$txnid.'|'.$pro->special_price.'|'.$pro->title.'|'.$address->name.'|'.$address->email.'|'.$salt;
+            $hash_string=  $merchantkey.'|'.
+            $txnid.'|'.
+            $pro->special_price.'|'.
+            $pro->title.'|'.
+            $address->name.'|'.
+            $address->email.'|'.
+            $salt;
+    //        echo $merchantkey . "|" .
+    //  $txnid . "|" .
+    //  $pro->special_price . "|" .
+    //  $pro->title . "|" .
+    //  $address->name . "|" .
+    //  $address->email;
+
+    //  echo $hash_string; die;
+    //          echo "<pre>";
+    //     print_r($hash_string); 
+           
+// die;
             $data['hash']= strtolower(hash('sha512', $hash_string)); 
             $data['callback_url']       = base_url('callback');
             $data['currency_code']      = 'INR';

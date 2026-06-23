@@ -1,5 +1,4 @@
 
-
 <section class="section-margin">
             <div class="container">
                 <div class="section-title section-title--bordered">
@@ -25,10 +24,10 @@
 								
 								<div class="product-card--body">
 									<div class="card-image">
-										<img src="<?php echo base_url('public/uploads/products/'.$row->image);?>" alt="">
+										<img src="<?php echo base_url('/uploads/products/'.$row->image);?>" alt="">
 										<div class="hover-contents">
 											<a href="/product/<?php echo $row->id; ?>" class="hover-image">
-												<img src="<?php echo base_url('public/uploads/products/'.$row->image);?>" alt="">
+												<img src="<?php echo base_url('/uploads/products/'.$row->image);?>" alt="">
 											</a>
 											<div class="hover-btns">
 										
@@ -60,6 +59,8 @@
             </div>
         </section>
 
+
+
 	  
 
         <section class="section-margin">
@@ -86,10 +87,10 @@
 								
 								<div class="product-card--body">
 									<div class="card-image">
-										<img src="<?php echo base_url('public/uploads/products/'.$row->image);?>" alt="">
+										<img src="<?php echo base_url('/uploads/products/'.$row->image);?>" alt="">
 										<div class="hover-contents">
 											<a href="/product/<?php echo $row->id; ?>" class="hover-image">
-												<img src="<?php echo base_url('public/uploads/products/'.$row->image);?>" alt="">
+												<img src="<?php echo base_url('/uploads/products/'.$row->image);?>" alt="">
 											</a>
 											<div class="hover-btns">
 										

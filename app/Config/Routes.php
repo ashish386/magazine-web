@@ -28,6 +28,7 @@ $routes->post('/orderSuccess', 'HomeController::orderSuccess');
 $routes->get('/orderFailed', 'HomeController::orderFailed');
 $routes->get('/downloadFile/(:segment)', 'HomeController::downloadFile/$1');
 $routes->get('/logout', 'HomeController::logout');
+$routes->get('/orderSuccess', 'HomeController::orderSuccess');
 
 $routes->group("api",function($routes){
 	$routes->post('login', 'UserController::login'); 
