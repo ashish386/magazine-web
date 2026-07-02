@@ -19,7 +19,7 @@
              
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-12">
-                       <img src="image/2.jpg" alt="">
+                       <img src="public/uploads/image/2.jpg" alt="">
                     </div>
             
 			

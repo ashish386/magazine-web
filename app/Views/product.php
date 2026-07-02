@@ -152,10 +152,10 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="image/1.jpg" alt="">
+                                    <img src="public/uploads/image/1.jpg" alt="">
                                     <div class="hover-contents">
                                         <a href="detail.php" class="hover-image">
-                                            <img src="image/2.jpg" alt="">
+                                            <img src="public/uploads/image/2.jpg" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
@@ -183,10 +183,10 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="image/1.jpg" alt="">
+                                    <img src="public/uploads/image/1.jpg" alt="">
                                     <div class="hover-contents">
                                         <a href="detail.php" class="hover-image">
-                                            <img src="image/2.jpg" alt="">
+                                            <img src="public/uploads/image/2.jpg" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
@@ -214,10 +214,10 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="image/1.jpg" alt="">
+                                    <img src="public/uploads/image/1.jpg" alt="">
                                     <div class="hover-contents">
                                         <a href="detail.php" class="hover-image">
-                                            <img src="image/2.jpg" alt="">
+                                            <img src="public/uploads/image/2.jpg" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
@@ -245,10 +245,10 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="image/1.jpg" alt="">
+                                    <img src="public/uploads/image/1.jpg" alt="">
                                     <div class="hover-contents">
                                         <a href="detail.php" class="hover-image">
-                                            <img src="image/2.jpg" alt="">
+                                            <img src="public/uploads/image/2.jpg" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
@@ -276,10 +276,10 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="image/1.jpg" alt="">
+                                    <img src="public/uploads/image/1.jpg" alt="">
                                     <div class="hover-contents">
                                         <a href="detail.php" class="hover-image">
-                                            <img src="image/2.jpg" alt="">
+                                            <img src="public/uploads/image/2.jpg" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
@@ -326,19 +326,19 @@
                                 "asNavFor": ".product-slider-nav"
                                 }'>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-1.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-1.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-2.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-3.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-3.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-4.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-5.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
                                 </div>
                             </div>
                             <!-- Product Details Slider Nav -->
@@ -355,19 +355,19 @@
           "focusOnSelect": true
           }'>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-1.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-1.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-2.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-3.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-3.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-4.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="image/products/product-details-5.jpg" alt="">
+                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
                                 </div>
                             </div>
                         </div>

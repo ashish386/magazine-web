@@ -9,9 +9,9 @@
         <title>Lucknow Focus by Pratham Publisher & Informatics Pvt. Ltd.</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Use Minified Plugins Version For Fast Page Load -->
-        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('/assets/css/plugins.css'); ?>" />
-        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('/assets/css/main.css'); ?>" />
-        <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('public/assets/css/plugins.css'); ?>" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url('public/assets/css/main.css'); ?>" />
+        <link rel="shortcut icon" type="image/x-icon" href="public/uploads/image/favicon.ico">
     </head>
 
     <body>
@@ -22,7 +22,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 ">
                                 <a href="/" class="site-brand">
-                                    <img src="<?php echo base_url('/uploads/image/logo2.png'); ?>" alt="">
+                                    <img src="<?php echo base_url('public/uploads/image/logo2.png'); ?>" alt="">
                                 </a>
                             </div>
                             <div class="col-lg-3">
@@ -142,7 +142,7 @@
                                                 <div class=" single-cart-block ">
                                                     <div class="cart-product">
                                                         <a href="product-details.html" class="image">
-                                                            <img src="<?php echo base_url('/assets/image/products/cart-product-1.jpg'); ?>" alt="">
+                                                            <img src="<?php echo base_url('public/assets/image/products/cart-product-1.jpg'); ?>" alt="">
                                                         </a>
                                                         <div class="content">
                                                             <h3 class="title"><a href="product-details.html">Kodak PIXPRO
@@ -176,7 +176,7 @@
                         <div class="row align-items-sm-end align-items-center">
                             <div class="col-md-4 col-7">
                                 <a href="index.php" class="site-brand">
-                                    <img src="<?php echo base_url('/uploads/image/logo2.png'); ?>" alt="">
+                                    <img src="<?php echo base_url('public/uploads/image/logo2.png'); ?>" alt="">
                                 </a>
                             </div>
                             <div class="col-md-5 order-3 order-md-2">
@@ -479,7 +479,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4">
                             <a href="index.html" class="site-brand">
-                                <img src="<?php echo base_url('/uploads/image/logo2.png'); ?>" alt="">
+                                <img src="<?php echo base_url('public/uploads/image/logo2.png'); ?>" alt="">
                             </a>
                         </div>
                         <div class="col-lg-8">

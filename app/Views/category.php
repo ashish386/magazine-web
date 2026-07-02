@@ -93,19 +93,19 @@
 										"asNavFor": ".product-slider-nav"
 										}'>
 										<div class="single-slide">
-											<img src="image/products/product-details-1.jpg" alt="">
+											<img src="public/uploads/products/product-details-1.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-2.jpg" alt="">
+											<img src="public/uploads/products/product-details-2.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-3.jpg" alt="">
+											<img src="public/uploads/products/product-details-3.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-4.jpg" alt="">
+											<img src="public/uploads/products/product-details-4.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-5.jpg" alt="">
+											<img src="public/uploads/products/product-details-5.jpg" alt="">
 										</div>
 									</div>
 									<!-- Product Details Slider Nav -->
@@ -122,19 +122,19 @@
 				  "focusOnSelect": true
 				  }'>
 										<div class="single-slide">
-											<img src="image/products/product-details-1.jpg" alt="">
+											<img src="public/uploads/products/product-details-1.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-2.jpg" alt="">
+											<img src="public/uploads/products/product-details-2.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-3.jpg" alt="">
+											<img src="public/uploads/products/product-details-3.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-4.jpg" alt="">
+											<img src="public/uploads/products/product-details-4.jpg" alt="">
 										</div>
 										<div class="single-slide">
-											<img src="image/products/product-details-5.jpg" alt="">
+											<img src="public/uploads/products/product-details-5.jpg" alt="">
 										</div>
 									</div>
 								</div>
