@@ -6,8 +6,8 @@
                 <div class="breadcrumb-contents">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active">About US</li>
+                              <li><a href="<?= base_url('/') ?>">Home</a></li>
+							<li class="current">About Us</li>
                         </ol>
                     </nav>
                 </div>
@@ -19,7 +19,7 @@
              
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-12">
-                       <img src="image/2.jpg" alt="">
+                       <img src="public/uploads/image/2.jpg" alt="">
                     </div>
             
 			

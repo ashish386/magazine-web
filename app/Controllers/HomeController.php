@@ -125,7 +125,7 @@ class HomeController extends BaseController
             'city'     => $this->request->getPost("city"),
             'state'    => $this->request->getPost("state"),
             'pincode'  => $this->request->getPost("pincode"),
-            'password' => md5(rand(100000,999999))
+            'password' => md5($this->request->getPost("password"))
         ];
 
         $db->table('customers')->insert($arr);
@@ -146,6 +146,7 @@ class HomeController extends BaseController
            ->where('id', $customerid)
            ->update($arr);
     }
+
 
     // Save Order
     $arr2 = [
@@ -418,18 +419,76 @@ class HomeController extends BaseController
           $session->destroy();
        return redirect()->to('/');
     }
-	public function downloadFile($id)
-    {
-		$order = new OrderModel();
-		$orderdetail = $order->getOrdersById($id);
-		//print_r($orderdetail);die;
-		$filePath = base_url('public/uploads/products/'.$orderdetail->file); 
-        		return $this->response->setHeader('Content-Type', 'application/pdf')
-                    ->setHeader('Content-Disposition', 'attachment; filename="'.$orderdetail->product.'.pdf"')
-                    ->setBody(file_get_contents($filePath));
+	// public function downloadFile($id)
+    // {
+	// 	$order = new OrderModel();
+	// 	$orderdetail = $order->getOrdersById($id);
+	// 	//print_r($orderdetail);die;
+	// 	$filePath = base_url('public/uploads/products/'.$orderdetail->file); 
+    //     		return $this->response->setHeader('Content-Type', 'application/pdf')
+    //                 ->setHeader('Content-Disposition', 'attachment; filename="'.$orderdetail->product.'.pdf"')
+    //                 ->setBody(file_get_contents($filePath));
 
-    }
+    // }
     
-   
+ public function downloadFile($id)
+{
+    $order = new OrderModel();
+    $orderdetail = $order->getOrdersById($id);
+
+    if (!$orderdetail || empty($orderdetail->file)) {
+        return $this->response->setJSON([
+            'status' => false,
+            'message' => 'File not found in database'
+        ]);
+    }
+
+    $filePath = ROOTPATH . 'public/uploads/files/' . $orderdetail->file;
+
+    if (!file_exists($filePath)) {
+        return $this->response->setJSON([
+            'status' => false,
+            'message' => 'File does not exist on server',
+            'path' => $filePath
+        ]);
+    }
+
+    return $this->response
+        ->download($filePath, null)
+        ->setFileName($orderdetail->product . '.pdf');
+}
+
+public function changePassword()
+{
+    $session = session();
+
+    $userId = $session->get('user_id');
+
+    $oldPassword = $this->request->getPost('old_password');
+    $newPassword = $this->request->getPost('new_password');
+
+    $db = \Config\Database::connect();
+
+    $user = $db->table('users')
+               ->where('id', $userId)
+               ->get()
+               ->getRow();
+
+    if (!$user) {
+        return redirect()->back()->with('error', 'User not found');
+    }
+
+    if ($user->password != md5($oldPassword)) {
+        return redirect()->back()->with('error', 'Old password is incorrect');
+    }
+
+    $db->table('users')
+       ->where('id', $userId)
+       ->update([
+           'password' => md5($newPassword)
+       ]);
+
+    return redirect()->back()->with('success', 'Password changed successfully');
+}
     
 }

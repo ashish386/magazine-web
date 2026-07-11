@@ -31,92 +31,73 @@ class ProductController extends BaseController {
     }
 	
 
-    public function saveProduct() {
-       
-       //$data = $this->request->getJSON();
-       
-        //print_r($data->slider); die;   
-        $arr = [
-            'title' => $this->request->getPost('title'),
-            'short_description' => $this->request->getPost('shortDescription'),
-            'description' => $this->request->getPost('description'),
-            'category' => $this->request->getPost('category'),
-            'price' => $this->request->getPost('price'),
-            'special_price' => $this->request->getPost('special_price'),
-            
-            ];
-        $imgProcess = new ImageProcess(); // Create an instance  
-		$arr['file'] = $imgProcess->uploadFile($this->request->getFile('file'),'files');
-		
-        $db = \Config\Database::connect();
-        $builder = $db->table('products');
-         
-                $builder->insert($arr);
-                $id =$db->insertID();
-        if ($id) {
-            
-			
-		$files = $this->request->getFiles();
+  public function saveProduct()
+{
+    $arr = [
+        'title'             => $this->request->getPost('title'),
+        'short_description' => $this->request->getPost('short_description'),
+        'description'       => $this->request->getPost('description'),
+        'category'          => $this->request->getPost('category'),
+        'price'             => $this->request->getPost('price'),
+        'special_price'     => $this->request->getPost('special_price'),
+    ];
 
-        $imageNames = []; // this will be the array of saved images
+    $imgProcess = new \App\Libraries\ImageProcess();
 
-        if ($files && isset($files['slider'])) {
-			 $i=1;
-            foreach ($files['slider'] as $img) { 
+    $file = $this->request->getFile('file');
 
-                /*if ($img->isValid() && !$img->hasMoved()) {
+    if ($file && $file->isValid()) {
+        $arr['file'] = $imgProcess->uploadFile($file, 'files');
+    } else {
+        $arr['file'] = '';
+    }
 
-                    $newName = $img->getRandomName();
-                    $img->move(WRITEPATH . 'uploads', $newName);
+    $db = \Config\Database::connect();
+    $builder = $db->table('products'); 
+    $insert = $builder->insert($arr);
 
-                    $imageNames[] = $newName;
-                }*/
-				
-				
-				$arr2[$i]['product_id'] = $id;
-                $arr2[$i]['file'] = $imgProcess->uploadFile($img,'products'); 
-                $arr2[$i]['default_image'] = $i==1?1:0;
+    if (!$insert) {
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'Product could not be inserted'
+        ]);
+    }
+
+    $id = $db->insertID();
+
+    $files = $this->request->getFiles();
+
+    if (!empty($files['slider'])) {
+
+        $arr2 = [];
+        $i = 1;
+
+        foreach ($files['slider'] as $img) {
+
+            if ($img && $img->isValid()) {
+
+                $arr2[] = [
+                    'product_id'    => $id,
+                    'file'          => $imgProcess->uploadFile($img, 'products'),
+                    'default_image' => ($i == 1 ? 1 : 0)
+                ];
+
                 $i++;
             }
         }
-			
-			
-			
-			
-			
-			
-            
-           /*  $i=1;
-                  
-            foreach( json_decode($this->request->getPost('slider')) as $row){ 
-               
-                $arr2[$i]['product_id'] = $id;
-                $arr2[$i]['file'] = $imgProcess->saveBase64ImageToFile($row,'products');
-                $arr2[$i]['default_image'] = $i==1?1:0;
-                $i++;
-               
-            } */
-           $builder = $db->table('product_images');    
-           $builder->insertBatch($arr2);
-            $response = array(
-                'status' => 'success',
-                'reason' => 'Product Inserted',
-                'data' => $id,
-            );
-            return $this->response
-                            ->setStatusCode(201)
-                            ->setJson($response);
-        } else {
-            $response = array(
-                'status' => 'success',
-                'reason' => 'Product could not be inserted',
-                'data' => '',
-            );
-            return $this->response
-                            ->setStatusCode(400)
-                            ->setJson($response);
+
+        if (!empty($arr2)) {
+            $db->table('product_images')->insertBatch($arr2);
         }
     }
+
+    return $this->response->setJSON([
+        'status' => 'success',
+        'message' => 'Product Inserted',
+        'data' => $id
+    ]);
+}
+
      public function updateProduct() {
 
   

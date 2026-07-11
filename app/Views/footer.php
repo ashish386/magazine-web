@@ -20,19 +20,19 @@
                                     "asNavFor": ".product-slider-nav"
                                     }'>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-1.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-1.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-2.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-2.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-3.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-3.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-4.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-4.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-5.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-5.jpg" alt="">
                                     </div>
                                 </div>
                                 <!-- Product Details Slider Nav -->
@@ -49,19 +49,19 @@
               "focusOnSelect": true
               }'>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-1.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-1.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-2.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-2.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-3.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-3.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-4.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-4.jpg" alt="">
                                     </div>
                                     <div class="single-slide">
-                                        <img src="image/products/product-details-5.jpg" alt="">
+                                        <img src="public/uploads/products/product-details-5.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
             <div class="container">
                 <p class="copyright-heading">Lucknow Focus is Lucknow based bilingual news portal, led by a group of professionals. The digital news platform covers entire UP and the Country. We don’t favor any party or political organization.</p>
                 <a href="#" class="payment-block">
-                    <img src="<?php echo base_url('/assets/image/icon/payment.png'); ?>" alt="">
+                    <img src="<?php echo base_url('public/assets/image/icon/payment.png'); ?>" alt="">
                 </a>
                 <p class="copyright-text">Copyright © 2025 <a href="#" class="author">Lucknow Focus by Pratham Publisher & Informatics Pvt. Ltd.</a>. All Right Reserved.
                     <br>
@@ -151,9 +151,9 @@
         </div>
     </footer>
     <!-- Use Minified Plugins Version For Fast Page Load -->
-    <script src="<?php echo base_url('/assets/js/plugins.js'); ?>"></script>
-    <script src="<?php echo base_url('/assets/js/ajax-mail.js'); ?>"></script>
-    <script src="<?php echo base_url('/assets/js/custom.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/js/plugins.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/js/ajax-mail.js'); ?>"></script>
+    <script src="<?php echo base_url('public/assets/js/custom.js'); ?>"></script>
 </body>
 
 

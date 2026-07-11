@@ -5,8 +5,9 @@
 				<div class="breadcrumb-contents">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-							<li class="breadcrumb-item active">My Account</li>
+							<!-- <li class="breadcrumb-item"><a href="index.html">Home</a></li> -->
+							   <li><a href="<?= base_url('/') ?>">Home</a></li>
+							<li class="current">My Account</li>
 						</ol>
 					</nav>
 				</div>
@@ -24,7 +25,9 @@
 											class="fas fa-tachometer-alt"></i>
 										Dashboard</a>
 									<a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
-									
+
+									<a href="#change-password" data-bs-toggle="tab"><i class="fas fa-key"></i> Change Password</a>
+
 									<a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
 								</div>
 							</div>
@@ -50,21 +53,21 @@
 									</div>
 									<!-- Single Tab Content End -->
 									<!-- Single Tab Content Start -->
-									<div class="tab-pane fade" id="orders" role="tabpanel">
-										<div class="myaccount-content">
-											<h3>Orders</h3>
-											<div class="myaccount-table table-responsive text-center">
-												<table class="table table-bordered">
-													<thead class="thead-light">
-														<tr>
-															<th>No</th>
-															<th>Product</th>
-															<th>Date</th>
-															<th>Amount</th>
-															<th>Action</th>
-														</tr>
-													</thead>
-													<tbody>
+										<div class="tab-pane fade" id="orders" role="tabpanel">
+											<div class="myaccount-content">
+												<h3>Orders</h3>
+												<div class="myaccount-table table-responsive text-center">
+													<table class="table table-bordered">
+														<thead class="thead-light">
+															<tr>
+																<th>No</th>
+																<th>Product</th>
+																<th>Date</th>
+																<th>Amount</th>
+																<th>Action</th>
+															</tr>
+														</thead>
+														<tbody>
 													<?php
 														$i=1;
 														foreach($orders as $row){ ?>
@@ -84,6 +87,45 @@
 											</div>
 										</div>
 									</div>
+
+									<div class="tab-pane fade" id="change-password" role="tabpanel">
+    <div class="myaccount-content">
+        <h3>Change Password</h3>
+
+		<?php if(session()->getFlashdata('success')): ?>
+    <div class="alert alert-success">
+        <?= session()->getFlashdata('success'); ?>
+    </div>
+<?php endif; ?>
+
+<?php if(session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
+
+
+        <form action="<?= base_url('change-password'); ?>" method="post">
+            
+            <div class="mb-3">
+                <label class="form-label">Old Password</label>
+                <input type="password" name="old_password" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">New Password</label>
+                <input type="password" name="new_password" class="form-control" required>
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary">
+                    Reset Password
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
 									<!-- Single Tab Content End -->
 									<!-- Single Tab Content Start -->
 									<div class="tab-pane fade" id="download" role="tabpanel">

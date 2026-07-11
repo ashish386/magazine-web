@@ -5,8 +5,8 @@
 				<div class="breadcrumb-contents">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-							<li class="breadcrumb-item active">Checkout</li>
+						   <li><a href="<?= base_url('/') ?>">Home</a></li>
+							<li class="current">Checkout</li>
 						</ol>
 					</nav>
 				</div>
@@ -139,7 +139,18 @@
 													<label>Pin Code*</label>
 													<input type="text" placeholder="Zip Code" name="pincode" value="<?php echo !$session->has('userdata')?"":$address->pincode; ?>" required >
 												</div>
-												
+
+
+										<?php if(!$session->has('userdata')){ ?>
+<div class="col-md-6 col-12 mb--20">
+    <label>Password*</label>
+    <input type="password"
+           placeholder="Enter Password"
+           name="password"
+           required>
+</div>
+<?php } ?>
+																					
 	<!--											<div class="col-md-6 col-12 mb--20">
 													<label>Country*</label> 
 													<select class="nice-select">
