@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\ProductModel;
 use App\Models\CustomerModel;
 use App\Models\OrderModel;
+use App\Models\CategoryModel;
 class HomeController extends BaseController
 {
     protected $session;
@@ -21,37 +22,43 @@ class HomeController extends BaseController
        $data['magzines'] = $product->getProductsByCategoryId(1);
        $data['books'] = $product->getProductsByCategoryId(2);
        
-        return view('header')
+        return view('header',$data)
             .view('index',$data)
             .view('footer');
     }
     
      public function about(): string
     {
+     
+
        return view('header')
             .view('about')
             .view('footer');
     }
      public function contact(): string
     {
+       
        return view('header')
             .view('contact')
             .view('footer');
     }
      public function privacy(): string
     {
+        
        return view('header')
             .view('privacy')
             .view('footer');
     }
      public function refund(): string
     {
+      
        return view('header')
             .view('refund')
             .view('footer');
     }
      public function terms(): string
     {
+    
        return view('header')
             .view('terms')
             .view('footer');

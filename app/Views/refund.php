@@ -1,4 +1,3 @@
-  <?php include('header.php');?>
 
 		     <section class="breadcrumb-section">
             <h2 class="sr-only">Site Breadcrumb</h2>
@@ -7,7 +6,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                               <li><a href="<?= base_url('/') ?>">Home</a></li>
-							<li class="current">About Us</li>
+							<li class="current">Refund Policy</li>
                         </ol>
                     </nav>
                 </div>
@@ -24,7 +23,7 @@
             
 			
                     <div class="col-lg-8 col-md-8 col-12">
-					<h4> About Us</h4>
+					<h4>Refund Policy</h4>
                       Lucknow Focus is Lucknow based bilingual news portal, led by a group of professionals. The digital news platform covers entire UP and the Country. We don’t favor any party or political organization.
 
 Our focus is to raise political and social issues and become the voice of common people. Our team plays a pro-active role of further strengthening the bond between us and our readers.
@@ -37,4 +36,4 @@ Our focus is to raise political and social issues and become the voice of common
         </main>
         <!-- Cart Page End -->
 		
-		  <?php include('footer.php');?>
+		

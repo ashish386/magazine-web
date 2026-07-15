@@ -1,5 +1,4 @@
-
-		     <section class="breadcrumb-section">
+<section class="breadcrumb-section">
             <h2 class="sr-only">Site Breadcrumb</h2>
             <div class="container">
                 <div class="breadcrumb-contents">

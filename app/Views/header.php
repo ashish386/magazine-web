@@ -478,7 +478,6 @@
                 <div class="container d-none d-lg-block">
                     <div class="row align-items-center">
                         <div class="col-lg-4">
-                            <a href="<?php echo base_url('/'); ?>">
                                 <img src="<?php echo base_url('public/uploads/image/logo2.png'); ?>" alt="">
                             </a>
                         </div>

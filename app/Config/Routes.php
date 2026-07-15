@@ -30,7 +30,7 @@ $routes->get('/downloadFile/(:segment)', 'HomeController::downloadFile/$1');
 $routes->get('/logout', 'HomeController::logout');
 $routes->get('/orderSuccess', 'HomeController::orderSuccess');
 $routes->post('/change-password','HomeController::changePassword');
-
+$routes->get('/category/(:num)', 'HomeController::category/$1');
 $routes->group("api",function($routes){
 	$routes->post('login', 'UserController::login'); 
     
