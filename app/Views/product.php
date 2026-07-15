@@ -1,4 +1,7 @@
-        <section class="breadcrumb-section">
+  <pre>
+    <?php print_r($relatedProducts);die; ?></pre>
+    
+  <section class="breadcrumb-section">
             <h2 class="sr-only">Site Breadcrumb</h2>
             <div class="container">
                 <div class="breadcrumb-contents">
@@ -27,7 +30,7 @@
               }'>
                             <?php foreach($product->images as $row){ ?>
                             <div class="single-slide">
-                                <img src="<?php echo base_url('public/uploads/products/'.$row->image_url);?>" alt="">
+                                <img src="<?=$row->image_url;?>" alt="<?= $product->title; ?>">
                             </div>
                             <?php } ?>
                             
@@ -46,7 +49,7 @@
               }'>
                             <?php foreach($product->images as $row){ ?>
                             <div class="single-slide">
-                                <img src="<?php echo base_url('public/uploads/products/'.$row->image_url);?>" alt="">
+                                <img src="<?=$row->image_url;?>" alt="<?= $product->title; ?>">
                             </div>
                             <?php } ?>
                         </div>
@@ -134,9 +137,11 @@
             <section class="">
                 <div class="container">
                     <div class="section-title section-title--bordered">
-                        <h2>RELATED PRODUCTS</h2>
+                        <h2>LATEST PRODUCTS </h2>
                     </div>
-                    <div class="product-slider sb-slick-slider slider-border-single-row" data-slick-setting='{
+                    <div class="product-slider sb-slick-slider slider-border-single-row"
+                    <?php foreach($relatedProducts as $row){ ?>
+                    data-slick-setting='{
                 "autoplay": true,
                 "autoplaySpeed": 8000,
                 "slidesToShow": 4,
@@ -152,14 +157,14 @@
                          
                             <div class="product-card--body">
                                 <div class="card-image">
-                                    <img src="public/uploads/image/1.jpg" alt="">
+                                    <img src= "<?=base_url('public/uploads/products/'.$row->file)?>" alt="">
                                     <div class="hover-contents">
-                                        <a href="detail.php" class="hover-image">
-                                            <img src="public/uploads/image/2.jpg" alt="">
+                                        <a href="<?= base_url('product/'.$row->id) ?>" class="hover-image">
+                                            <img src="<?= base_url("public/uploads/products/".$row->file) ?>" alt="">
                                         </a>
                                    <div class="hover-btns">
 										
-													<a href="detail.php" class="single-btn">Buy Now
+													<a href="<?=base_url('product/'.$row->id); ?>" class="single-btn">Buy Now</a>
 													<i class="fas fa-shopping-basket"></i>
 												</a>
 											
@@ -167,142 +172,20 @@
                                     </div>
                                 </div>
 							 <div class="product-header">
-                                <h3><a href="product-details.html">Magazine 2025 December
+                                <h3><a href="<?= base_url('product/'.$row->id) ?>">
+                                    <?= $row->title;?>
                                  </a></h3>
                             </div>
                               <div class="price-block">
-										<span class="price">Rs 10</span>
-										<del class="price-old">Rs 10</del>
-										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
+										<span class="price">Rs <?= $row->special_price;?></span>
+										<del class="price-old">Rs <?= $row->price;?></  del>
+										<span class="price-discount"><a href="<?= base_url('product/'.$row->id); ?>"class="single-btn"> View More </a>
 									</div>
                             </div>
                         </div>
                     </div>
-					<div class="single-slide">
-                        <div class="product-card">
-                         
-                            <div class="product-card--body">
-                                <div class="card-image">
-                                    <img src="public/uploads/image/1.jpg" alt="">
-                                    <div class="hover-contents">
-                                        <a href="detail.php" class="hover-image">
-                                            <img src="public/uploads/image/2.jpg" alt="">
-                                        </a>
-                                   <div class="hover-btns">
-										
-													<a href="detail.php" class="single-btn">Buy Now
-													<i class="fas fa-shopping-basket"></i>
-												</a>
-											
-											</div>
-                                    </div>
-                                </div>
-							 <div class="product-header">
-                                <h3><a href="product-details.html">Magazine 2025 December
-                                 </a></h3>
-                            </div>
-                              <div class="price-block">
-										<span class="price">Rs 10</span>
-										<del class="price-old">Rs 10</del>
-										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
-									</div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="single-slide">
-                        <div class="product-card">
-                         
-                            <div class="product-card--body">
-                                <div class="card-image">
-                                    <img src="public/uploads/image/1.jpg" alt="">
-                                    <div class="hover-contents">
-                                        <a href="detail.php" class="hover-image">
-                                            <img src="public/uploads/image/2.jpg" alt="">
-                                        </a>
-                                   <div class="hover-btns">
-										
-													<a href="detail.php" class="single-btn">Buy Now
-													<i class="fas fa-shopping-basket"></i>
-												</a>
-											
-											</div>
-                                    </div>
-                                </div>
-							 <div class="product-header">
-                                <h3><a href="product-details.html">Magazine 2025 December
-                                 </a></h3>
-                            </div>
-                              <div class="price-block">
-										<span class="price">Rs 10</span>
-										<del class="price-old">Rs 10</del>
-										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
-									</div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="single-slide">
-                        <div class="product-card">
-                         
-                            <div class="product-card--body">
-                                <div class="card-image">
-                                    <img src="public/uploads/image/1.jpg" alt="">
-                                    <div class="hover-contents">
-                                        <a href="detail.php" class="hover-image">
-                                            <img src="public/uploads/image/2.jpg" alt="">
-                                        </a>
-                                   <div class="hover-btns">
-										
-													<a href="detail.php" class="single-btn">Buy Now
-													<i class="fas fa-shopping-basket"></i>
-												</a>
-											
-											</div>
-                                    </div>
-                                </div>
-							 <div class="product-header">
-                                <h3><a href="product-details.html">Magazine 2025 December
-                                 </a></h3>
-                            </div>
-                              <div class="price-block">
-										<span class="price">Rs 10</span>
-										<del class="price-old">Rs 10</del>
-										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
-									</div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="single-slide">
-                        <div class="product-card">
-                         
-                            <div class="product-card--body">
-                                <div class="card-image">
-                                    <img src="public/uploads/image/1.jpg" alt="">
-                                    <div class="hover-contents">
-                                        <a href="detail.php" class="hover-image">
-                                            <img src="public/uploads/image/2.jpg" alt="">
-                                        </a>
-                                   <div class="hover-btns">
-										
-													<a href="detail.php" class="single-btn">Buy Now
-													<i class="fas fa-shopping-basket"></i>
-												</a>
-											
-											</div>
-                                    </div>
-                                </div>
-							 <div class="product-header">
-                                <h3><a href="product-details.html">Magazine 2025 December
-                                 </a></h3>
-                            </div>
-                              <div class="price-block">
-										<span class="price">Rs 10</span>
-										<del class="price-old">Rs 10</del>
-										<span class="price-discount"><a href="detail.php" class="single-btn">View More</a></span>
-									</div>
-                            </div>
-                        </div>
-                    </div>
-				
+	
+				<?php }?>
 
 				</div>
                 </div>
@@ -326,19 +209,19 @@
                                 "asNavFor": ".product-slider-nav"
                                 }'>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-1.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-1.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-2.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-3.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-3.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-5.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-5.jpg') ?>" alt="">
                                 </div>
                             </div>
                             <!-- Product Details Slider Nav -->
@@ -355,19 +238,19 @@
           "focusOnSelect": true
           }'>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-1.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-1.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-2.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-3.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-3.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-2.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-2.jpg') ?>" alt="">
                                 </div>
                                 <div class="single-slide">
-                                    <img src="public/uploads/products/product-details-5.jpg" alt="">
+                                    <img src="<?= base_url('public/uploads/products/product-details-5.jpg') ?>" alt="">
                                 </div>
                             </div>
                         </div>

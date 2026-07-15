@@ -35,7 +35,7 @@ class ProductController extends BaseController {
 {
     $arr = [
         'title'             => $this->request->getPost('title'),
-        'short_description' => $this->request->getPost('short_description'),
+        'short_description' => $this->request->getPost('shortDescription'),
         'description'       => $this->request->getPost('description'),
         'category'          => $this->request->getPost('category'),
         'price'             => $this->request->getPost('price'),

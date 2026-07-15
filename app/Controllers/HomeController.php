@@ -64,14 +64,14 @@ class HomeController extends BaseController
             .view('category',$data)
             .view('footer');
     }
-     public function product($id): string
-    {
-        $product = new ProductModel();
-		$data['product'] = $product->getProductById($id); 
-       return view('header')
-            .view('product',$data)
-            .view('footer');
-    }
+    //  public function product($id): string
+    // {
+    //     $product = new ProductModel();
+	// 	$data['product'] = $product->getProductById($id); 
+    //    return view('header')
+    //         .view('product',$data)
+    //         .view('footer');
+   //
      public function checkout($id)
     {
               
@@ -491,4 +491,21 @@ public function changePassword()
     return redirect()->back()->with('success', 'Password changed successfully');
 }
     
+public function product($id) {
+    $productModel= new ProductModel();
+   $data['product']=$productModel->getProductById($id);
+
+$data['relatedProducts']=$productModel
+    ->where('status',1)
+    ->where('id !=',$id)
+    ->orderBy('id','DESC')
+    ->findAll(5);
+
+  return view('header')
+            .view('product',$data)
+            .view('footer');
+
+
+
+}
 }

@@ -58,6 +58,10 @@ class ProductModel extends Model
         $builder->where('id',$id);
         $builder->where('status',1);
         $product = $builder->get()->getRow();
+
+        if(!$product) {
+            return null; // Product not found
+        }
         
         $builder2 = $db->table('product_images');
         $builder2->select("id,CONCAT('$baseurl', file) image_url,default_image"); 
